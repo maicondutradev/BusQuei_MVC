@@ -18,8 +18,8 @@ namespace BusQuei.Models
         [StringLength(100)]
         public string Type { get; set; }
 
-        [Required]
-        [RegularExpression("Agendada|EmAndamento|Concluída", ErrorMessage = "Status inválido. Valores permitidos: Agendada, EmAndamento, Concluída.")]
+        //[Required]
+        //[RegularExpression("Agendada|EmAndamento|Concluída", ErrorMessage = "Status inválido. Valores permitidos: Agendada, EmAndamento, Concluída.")]
         public string Status { get; set; }
 
         [StringLength(500)]

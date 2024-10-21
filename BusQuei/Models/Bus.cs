@@ -19,8 +19,8 @@ namespace BusQuei.Models
         [Range(1, 100, ErrorMessage = "A capacidade deve ser entre 1 e 100.")]
         public int Capacity { get; set; }
 
-        [Required]
-        [RegularExpression("EmOperação|EmManutenção|Inativo", ErrorMessage = "Status inválido. Valores permitidos: EmOperação, EmManutenção, Inativo.")]
+        //[Required]
+        //[RegularExpression("EmOperação|EmManutenção|Inativo", ErrorMessage = "Status inválido. Valores permitidos: EmOperação, EmManutenção, Inativo.")]
         public string Status { get; set; }
 
         public ICollection<Maintenance> Maintenances { get; set; }

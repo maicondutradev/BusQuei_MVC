@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="btn btn-primary">Create</h1>
 
 <h4>Bus</h4>
 <hr />
@@ -31,15 +31,15 @@
                 <label asp-for="Status"></label>
                 <select asp-for="Status" class="form-control">
                     <option value="">Selecione o status</option>
-                    <option value="InOperation">Em Operação</option>
-                    <option value="InMaintenance">Em Manutenção</option>
+                    <option value="InOperation">EmOperação</option>
+                    <option value="InMaintenance">EmManutenção</option>
                     <option value="Inactive">Inativo</option>
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RouteId" class="control-label"></label>
-                <select asp-for="RouteId" class ="form-control" asp-items="ViewBag.RouteId"></select>
+                <select asp-for="RouteId" class="form-control" asp-items="ViewBag.RouteId"></select>
             </div>
             <div class="form-group">
                 <a asp-action="Index" class="btn btn-primary">Voltar</a>
@@ -50,5 +50,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

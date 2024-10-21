@@ -1,0 +1,59 @@
+/* Estilo geral da página */
+body {
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do título */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Estilo do painel de detalhes */
+h4 {
+    margin-bottom: 10px;
+}
+
+/* Estilo do dicionário de detalhes */
+dl.row {
+    margin-bottom: 20px;
+}
+
+/* Estilos para os botões */
+.btn {
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    margin-right: 5px;
+    font-weight: bold;
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor para indicar que é um botão */
+}
+
+.btn-edit {
+    background-color: #007bff; /* Azul */
+}
+
+.btn-back {
+    background-color: #555; /* Cinza escuro */
+}
+
+/* Efeito de hover */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    dl.row {
+        display: block;
+    }
+
+    dt, dd {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
