@@ -1,20 +1,17 @@
 ﻿@model BusQuei.Models.Maintenance
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar Manutenção";
 }
 
-<h1>Cadastrar</h1>
-
-<h4>Maintenance</h4>
-<hr />
-<div class="row">
+<h4 style="text-align:center;">Cadastrar Manutenção</h4>
+<div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="BusId" class="control-label"></label>
-                <select asp-for="BusId" class ="form-control" asp-items="ViewBag.BusId"></select>
+                <select asp-for="BusId" class="form-control" asp-items="ViewBag.BusId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
@@ -30,8 +27,8 @@
                 <label asp-for="Status"></label>
                 <select asp-for="Status" class="form-control">
                     <option value="">Selecione o status</option>
-                    <option value="InOperation">EmOperação</option>
-                    <option value="InMaintenance">EmManutenção</option>
+                    <option value="InOperation">Em Operação</option>
+                    <option value="InMaintenance">Em Manutenção</option>
                     <option value="Inactive">Inativo</option>
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
@@ -41,9 +38,9 @@
                 <input asp-for="Remarks" class="form-control" />
                 <span asp-validation-for="Remarks" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="text-align: center;">
                 <a asp-action="Index" class="btn btn-primary">Voltar</a>
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
             </div>
         </form>
     </div>

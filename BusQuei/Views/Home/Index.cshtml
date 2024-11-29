@@ -1,10 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
+<head>
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+
 <div class="text-center">
-    <h1 class="display-4">Bem-vindo ao Sistema de Gerenciamento de Ônibus</h1>
-    <p>Uma solução completa para gerenciar frotas, motoristas e rotas de forma eficiente.</p>
+    <h1 class="display-4">Sistema de Gerenciamento de Frotas de Ônibus</h1>
 </div>
 
 <div class="container features">
@@ -13,21 +17,34 @@
         <div class="col-md-3 feature-card">
             <h3>Gerenciamento de Ônibus</h3>
             <p>Cadastre, edite e visualize informações detalhadas sobre cada ônibus da sua frota.</p>
+            <a asp-area="" asp-controller="Bus" asp-action="Index" class="btn">Acessar</a>
         </div>
         <div class="col-md-3 feature-card">
-            <h3>Controle de Motoristas</h3>
-            <p>Mantenha um registro completo dos motoristas, suas rotas e histórico de condução.</p>
+            <h3>Controle de Manutenções</h3>
+            <p>Mantenha um registro completo das manutenções.
+                <br />
+                <br />
+            </p>
+            <a asp-area="" asp-controller="Maintenance" asp-action="Index" class="btn">Acessar</a>
         </div>
         <div class="col-md-3 feature-card">
             <h3>Planejamento de Rotas</h3>
             <p>Crie e otimize rotas de viagem com base nas necessidades da sua operação.</p>
+            <a asp-area="" asp-controller="Route" asp-action="Index" class="btn">Acessar</a>
         </div>
         <div class="col-md-3 feature-card">
             <h3>Relatórios Detalhados</h3>
-            <p>Gere relatórios sobre o desempenho de cada motorista e a eficiência das rotas.</p>
+            <p>Gere relatórios sobre o desempenho de cada motorista e a eficiência das rotas.
+                <br />
+                <br />
+            </p>
+            <a asp-area="" asp-controller="Reports" asp-action="Index" class="btn">Acessar</a>
         </div>
     </div>
 </div>
+
+
+
 
 <!--
 <footer class="footer">

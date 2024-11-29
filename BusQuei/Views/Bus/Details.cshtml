@@ -1,53 +1,44 @@
 ﻿@model BusQuei.Models.Bus
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do ônibus";
 }
-
-<h1>Details</h1>
 
 <head>
     <link rel="stylesheet" href="~/css/onibus_details.css" asp-append-version="true" />
 </head>
 
-<div>
-    <h4>Bus</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LicensePlate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LicensePlate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Model)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Capacity)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Capacity)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Route)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Route.Arrival)
-        </dd>
-    </dl>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+    <div style="width: 60%; padding: 20px; border-radius: 8px;">
+        <h4 style="text-align: center;">Detalhes do Ônibus</h4>
+        <table class="table table-bordered" style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <td><strong>@Html.DisplayNameFor(model => model.LicensePlate)</strong></td>
+                    <td>@Html.DisplayFor(model => model.LicensePlate)</td>
+                </tr>
+                <tr>
+                    <td><strong>@Html.DisplayNameFor(model => model.Model)</strong></td>
+                    <td>@Html.DisplayFor(model => model.Model)</td>
+                </tr>
+                <tr>
+                    <td><strong>@Html.DisplayNameFor(model => model.Capacity)</strong></td>
+                    <td>@Html.DisplayFor(model => model.Capacity)</td>
+                </tr>
+                <tr>
+                    <td><strong>@Html.DisplayNameFor(model => model.Status)</strong></td>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                </tr>
+                <tr>
+                    <td><strong>@Html.DisplayNameFor(model => model.Route)</strong></td>
+                    <td>@Html.DisplayFor(model => model.Route.Arrival)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<div>
-    <a class="btn btn-back" asp-action="Index">Voltar</a>
-    <a class="btn btn-edit" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+<div style="text-align: center; margin-bottom: 200px">
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
 </div>

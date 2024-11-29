@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Relatórios";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Relatórios do Sistema</h1>
+</div>
+
+<div class="container features">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Selecione um Relatório</h3>
+            <p>Escolha o tipo de relatório que deseja visualizar ou exportar:</p>
+
+            <form method="post" asp-controller="Reports" asp-action="GeneratePdf">
+                <div class="form-group">
+                    <label for="reportType">Tipo de Relatório</label>
+                    <select id="reportType" name="reportType" class="form-control">
+                        <option value="bus">Ônibus</option>
+                        <option value="routes">Rotas</option>
+                        <option value="maintenance">Manutenções</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Exportar como PDF</button>
+            </form>
+        </div>
+    </div>
+    <!--
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Relatórios Recentes</h3>
+            <p>Visualize os dados antes de exportar:</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Relatório de Ônibus</td>
+                        <td>29/11/2024</td>
+                        <td>
+                            <form method="post" asp-controller="Reports" asp-action="GeneratePdf" class="d-inline">
+                                <input type="hidden" name="reportType" value="bus" />
+                                <button type="submit" class="btn btn-sm btn-primary">Exportar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Relatório de Rotas</td>
+                        <td>28/11/2024</td>
+                        <td>
+                            <form method="post" asp-controller="Reports" asp-action="GeneratePdf" class="d-inline">
+                                <input type="hidden" name="reportType" value="routes" />
+                                <button type="submit" class="btn btn-sm btn-primary">Exportar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Relatório de Manutenções</td>
+                        <td>27/11/2024</td>
+                        <td>
+                            <form method="post" asp-controller="Reports" asp-action="GeneratePdf" class="d-inline">
+                                <input type="hidden" name="reportType" value="maintenance" />
+                                <button type="submit" class="btn btn-sm btn-primary">Exportar</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    -->
+</div>

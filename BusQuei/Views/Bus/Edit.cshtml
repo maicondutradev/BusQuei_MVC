@@ -1,15 +1,12 @@
 ﻿@model BusQuei.Models.Bus
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar informações do ônibus";
 }
-
-<h1>Edit</h1>
-
-<h4>Bus</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<h4 class="text-center" style="color:black">Editar informação do ônibus</h4>
+<div class="d-flex justify-content-center align-items-center vh:60h">
+    <div class="w-50">
+        
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
@@ -29,30 +26,27 @@
                 <span asp-validation-for="Capacity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Status"></label>
                 <select asp-for="Status" class="form-control">
                     <option value="">Selecione o status</option>
-                    <option value="InOperation">EmOperação</option>
-                    <option value="InMaintenance">EmManutenção</option>
+                    <option value="InOperation">Em Operação</option>
+                    <option value="InMaintenance">Em Manutenção</option>
                     <option value="Inactive">Inativo</option>
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
-
+                <label asp-for="RouteId" class="control-label"></label>
+                <select asp-for="RouteId" class="form-control" asp-items="ViewBag.RouteId">
+                    <option value="">Selecione uma rota</option>
+                </select>
+            </div>
+            <div class="form-group text-center">
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                <input type="submit" value="Salvar" class="btn btn-success" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index" class="btn btn-primary">Voltar</a>
-    <input type="submit" value="Save" class="btn btn-primary" />
 </div>
 
 @section Scripts {
